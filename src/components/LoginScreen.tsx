@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import purinaLogo from '../purina.png';
+import ber from '../ber.png.jpg';
+
 
 interface LoginScreenProps {
   onLogin: () => void;
@@ -24,9 +27,7 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
           {/* Logo */}
           <div className="mb-12">
             <div className="text-white mb-8">
-              <svg width="120" height="40" viewBox="0 0 120 40" fill="none">
-                <text x="0" y="30" fill="white" fontSize="24" fontFamily="Arial">PURINA</text>
-              </svg>
+              <img src={purinaLogo} alt="Purina Logo" style={{ width: '160px', marginBottom: '30px' }} />
             </div>
           </div>
 
@@ -65,12 +66,14 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
           </form>
         </div>
       </div>
+
+      
 {/* AQUIIIIIIIIIIII A FT DO DOG */}
       {/* Right side - Image and case study */}
       <div className="w-1/2 relative">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&q=80"
-          alt="Veterinária com cachorro"
+          src={ber}
+          alt="Dog do campo"
           className="w-full h-full object-cover"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-12">

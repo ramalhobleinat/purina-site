@@ -57,8 +57,8 @@ export default function MainPortal({ onLogout }: MainPortalProps) {
                 className="px-8 py-3 rounded-full transition-all hover:scale-105"
                 style={
                   currentView === 'dashboard'
-                    ? { backgroundColor: '#4A3B00', color: '#FFFFFF' }
-                    : { backgroundColor: '#FFFFFF', border: '2px solid #4A3B00', color: '#4A3B00' }
+                    ? { backgroundColor: '#ccb071', color: '#FFFFFF' }
+                    : { backgroundColor: '#FFFFFF', border: '2px solid #ccb071', color: '#4A3B00' }
                 }
               >
                 Dashboard
@@ -68,8 +68,8 @@ export default function MainPortal({ onLogout }: MainPortalProps) {
                 className="px-8 py-3 rounded-full transition-all hover:scale-105"
                 style={
                   currentView === 'courses'
-                    ? { backgroundColor: '#4A3B00', color: '#FFFFFF' }
-                    : { backgroundColor: '#FFFFFF', border: '2px solid #4A3B00', color: '#4A3B00' }
+                    ? { backgroundColor: '#ccb071', color: '#FFFFFF' }
+                    : { backgroundColor: '#FFFFFF', border: '2px solid #ccb071', color: '#4A3B00' }
                 }
               >
                 Cursos
@@ -79,8 +79,8 @@ export default function MainPortal({ onLogout }: MainPortalProps) {
                 className="px-8 py-3 rounded-full transition-all hover:scale-105"
                 style={
                   currentView === 'benefits'
-                    ? { backgroundColor: '#4A3B00', color: '#FFFFFF' }
-                    : { backgroundColor: '#FFFFFF', border: '2px solid #4A3B00', color: '#4A3B00' }
+                    ? { backgroundColor: '#ccb071', color: '#FFFFFF' }
+                    : { backgroundColor: '#FFFFFF', border: '2px solid #ccb071', color: '#4A3B00' }
                 }
               >
                 Benefícios

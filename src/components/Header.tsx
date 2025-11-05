@@ -16,14 +16,14 @@ export default function Header({ onLevelClick }: HeaderProps) {
         />
         <div>
           <h1 className="text-white">Olá, Olivia</h1>
-          <p style={{ color: '#4A3B00' }}>Portal do veterinário</p>
+          <p style={{ color: '#ccb071' }}>Portal do veterinário</p>
         </div>
       </div>
       
       <button
         onClick={onLevelClick}
         className="px-6 py-2 rounded-full hover:opacity-90 transition-all"
-        style={{ backgroundColor: '#D8CAA5', color: '#D6D6D6' }}
+        style={{ backgroundColor: '#D6D6D6', color: 'black' }}
       >
         Prata
       </button>
