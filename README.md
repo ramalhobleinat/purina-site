@@ -1,7 +1,7 @@
 
-  # Tarot Reading App
+  # Purina App
 
-  This is a code bundle for Tarot Reading App. The original project is available at https://www.figma.com/design/d825FH1GA22W7JtGvHt4FV/Tarot-Reading-App.
+  This is a code bundle for Purina App. The original project is available at https://www.figma.com/design/d825FH1GA22W7JtGvHt4FV/Tarot-Reading-App.
 
   ## Running the code
 
