@@ -15,7 +15,7 @@ export default function Header({ onLevelClick }: HeaderProps) {
           style={{ borderColor: '#D6D6D6' }}
         />
         <div>
-          <h1 className="text-white">Olá, Olivia</h1>
+          <h1 className="text-white">Olá, Vet</h1>
           <p style={{ color: '#ccb071' }}>Portal do veterinário</p>
         </div>
       </div>

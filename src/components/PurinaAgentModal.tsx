@@ -48,21 +48,6 @@ export default function PurinaAgentModal({ onClose }: PurinaAgentModalProps) {
                   </p>
                 </div>
               </div>
-
-              <div className="flex gap-4">
-                <button 
-                  className="flex-1 px-6 py-3 rounded-full transition-all hover:opacity-80 hover:scale-105"
-                  style={{ backgroundColor: 'transparent', border: '2px solid #ccb071', color: '#FFFFFF' }}
-                >
-                  Cálculo Nutricional
-                </button>
-                <button 
-                  className="flex-1 px-6 py-3 rounded-full transition-all hover:opacity-80 hover:scale-105"
-                  style={{ backgroundColor: 'transparent', border: '2px solid #ccb071', color: '#FFFFFF' }}
-                >
-                  Integração Clube ProPlan
-                </button>
-              </div>
             </div>
 
             {/* Right QR Code */}

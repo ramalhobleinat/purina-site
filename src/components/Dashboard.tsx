@@ -16,7 +16,7 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
   const quickActions = [
     { label: 'Novos Cursos', icon: BookOpen },
     { label: 'Materiais', icon: FileText },
-    { label: 'Telegram', icon: Send },
+    { label: 'PurinaVet AI', icon: Send },
     { label: 'Resgatar', icon: Gift },
   ];
 
@@ -28,7 +28,7 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
       bgColor: 'bg-amber-50',
     },
     {
-      title: 'Grupo Telegram',
+      title: 'PurinaVet AI',
       description: 'Participe da comunidade de veterinários Purina',
       icon: Send,
       bgColor: 'bg-green-50',
@@ -67,7 +67,7 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
 
         {/* Quick Actions */}
         <div className="rounded-2xl p-6 shadow-sm" style={{ backgroundColor: '#FFFFFF' }}>
-          <h2 className="mb-6" style={{ color: '#1B1B1B' }}>Ações Rápidas</h2>
+          <h2 className="mb-6" style={{ color: '#000000' }}>Ações Rápidas</h2>
           <div className="grid grid-cols-2 gap-4">
             {quickActions.map((action, index) => {
               const Icon = action.icon;
@@ -75,12 +75,12 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
                 <button
                   key={index}
                   onClick={() => {
-                    if (action.label === 'Telegram') {
+                    if (action.label === 'PurinaVet AI') {
                       onShowAgent();
                     }
                   }}
                   className="rounded-xl p-4 flex flex-col items-center gap-2 hover:scale-105 hover:shadow-md transition-all"
-                  style={{ backgroundColor: '#FFFFFF', border: '2px solid #D8CAA5' }}
+                  style={{ backgroundColor: '#FFFFFF', border: '2px solid #B29962' }}
                 >
                   <Icon className="w-8 h-8" style={{ color: '#4A3B00' }} />
                   <span style={{ color: '#1B1B1B' }}>{action.label}</span>

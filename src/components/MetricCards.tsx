@@ -11,7 +11,7 @@ export default function MetricCards() {
           <h3 style={{ color: '#6F6F6F' }}>Pontos Totais</h3>
         </div>
         <div style={{ color: '#1B1B1B' }}>75 pontos</div>
-        <p className="mt-2" style={{ color: '#4A3B00' }}>+12 desde a última semana</p>
+        <p className="mt-2" style={{ color: '#645103' }}>+12 desde a última semana</p>
       </div>
 
       {/* Courses Completed */}
@@ -37,7 +37,7 @@ export default function MetricCards() {
       {/* Next Level */}
       <div className="rounded-2xl p-6 shadow-sm" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="flex items-center gap-3 mb-3">
-          <TrendingUp className="w-6 h-6" style={{ color: '#ccb071' }} />
+          <TrendingUp className="w-6 h-6" style={{ color: '#b89442' }} />
           <h3 style={{ color: '#6F6F6F' }}>Próximo Nível</h3>
         </div>
         <div style={{ color: '#1B1B1B' }}>Prata → Ouro</div>

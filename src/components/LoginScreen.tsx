@@ -27,8 +27,8 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
           {/* Logo */}
           <div className="mb-12">
             <div className="text-white mb-8">
-              <img src={purinaLogo} alt="Purina Logo" style={{ width: '160px', marginBottom: '30px' }} />
-            </div>
+  <img src={purinaLogo} alt="Purina Logo" style={{ width: '160px', marginBottom: '30px' }} />
+</div>
           </div>
 
           <h1 className="text-white mb-8">Login</h1>
