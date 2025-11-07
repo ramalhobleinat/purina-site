@@ -26,12 +26,17 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
         <div className="w-full max-w-md">
           {/* Logo */}
           <div className="mb-12">
-            <div className="text-white mb-8">
-  <img src={purinaLogo} alt="Purina Logo" style={{ width: '160px', marginBottom: '30px' }} />
+  <div className="flex justify-center mb-8">
+    <img
+      src={purinaLogo}
+      alt="Purina Logo"
+      className="w-[160px]"
+    />
+  </div>
 </div>
-          </div>
 
-          <h1 className="text-white mb-8">Login</h1>
+
+<h1 className="text-white mb-8 text-center">Login</h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>

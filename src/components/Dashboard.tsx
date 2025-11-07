@@ -1,6 +1,9 @@
 import { Award, BookOpen, Users, TrendingUp, FileText, Send, Gift } from 'lucide-react';
 import MetricCards from './MetricCards';
 
+// IMPORTA o PDF dentro de src (com espaço no nome mesmo)
+import pdfPurina from '../pdf-purina.pdf';
+
 interface DashboardProps {
   onShowAgent: () => void;
 }
@@ -31,7 +34,8 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
       title: 'PurinaVet AI',
       description: 'Participe da comunidade de veterinários Purina',
       icon: Send,
-      bgColor: 'bg-green-50',
+      // opcional; o inline style abaixo já força o azul
+      bgColor: 'bg-[#E4F1FF]',
     },
     {
       title: 'Selo Verde Pro Plan Personalizado',
@@ -71,13 +75,26 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
           <div className="grid grid-cols-2 gap-4">
             {quickActions.map((action, index) => {
               const Icon = action.icon;
-              return (
+              const isMateriais = action.label === 'Materiais';
+
+              return isMateriais ? (
+                <a
+                  key={index}
+                  href={pdfPurina}             // usa a URL gerada pelo bundler
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl p-4 flex flex-col items-center gap-2 hover:scale-105 hover:shadow-md transition-all"
+                  style={{ backgroundColor: '#FFFFFF', border: '2px solid #B29962' }}
+                >
+                  <Icon className="w-8 h-8" style={{ color: '#4A3B00' }} />
+                  <span style={{ color: '#1B1B1B' }}>{action.label}</span>
+                </a>
+              ) : (
                 <button
                   key={index}
+                  type="button"
                   onClick={() => {
-                    if (action.label === 'PurinaVet AI') {
-                      onShowAgent();
-                    }
+                    if (action.label === 'PurinaVet AI') onShowAgent();
                   }}
                   className="rounded-xl p-4 flex flex-col items-center gap-2 hover:scale-105 hover:shadow-md transition-all"
                   style={{ backgroundColor: '#FFFFFF', border: '2px solid #B29962' }}
@@ -97,10 +114,13 @@ export default function Dashboard({ onShowAgent }: DashboardProps) {
         <div className="grid grid-cols-3 gap-6">
           {levelBenefits.map((benefit, index) => {
             const Icon = benefit.icon;
+            const isAgent = benefit.title === 'PurinaVet AI';
+
             return (
               <div
                 key={index}
                 className={`${benefit.bgColor} rounded-2xl p-6 flex flex-col items-center text-center`}
+                style={isAgent ? { backgroundColor: '#E4F1FF' } : undefined}
               >
                 <Icon className="w-12 h-12 mb-4" style={{ color: '#4A3B00' }} />
                 <h3 className="mb-2" style={{ color: '#1B1B1B' }}>{benefit.title}</h3>
