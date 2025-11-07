@@ -3,7 +3,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface PurinaAgentModalProps {
   onClose: () => void;
-}
+}                  
 
 export default function PurinaAgentModal({ onClose }: PurinaAgentModalProps) {
   return (

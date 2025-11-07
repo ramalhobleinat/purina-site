@@ -27,10 +27,20 @@ export default function Courses() {
   ]);
 
   const discoverCourses = [
-    'Oncologia Veterinária Básica',
-    'Ortopedia para Pequenos Animais',
-    'Comportamento Animal',
-  ];
+  {
+    name: 'A distensão gástrica é um sinal de saciedade fisiológica.',
+    link: 'https://portugal-npp.talentlms.com/catalog/info/id:4455',
+  },
+  {
+    name: 'A forma como alimento: o cão com diabetes.',
+    link: 'https://portugal-npp.talentlms.com/catalog/info/id:4774',
+  },
+  {
+    name: 'Avaliação da permeabilidade intestinal em cães.',
+    link: 'https://portugal-npp.talentlms.com/catalog/info/id:4803',
+  },
+];
+
 
   const openLink = (link: string) => {
     window.open(link, '_blank'); // abre em nova aba
@@ -82,21 +92,38 @@ export default function Courses() {
       <div className="rounded-2xl p-6 shadow-sm" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="flex items-center justify-between mb-6">
           <h2 style={{ color: '#1B1B1B' }}>Descubra mais cursos!</h2>
-          <button className="hover:scale-110 hover:opacity-70 transition-all">
-            <ChevronRight className="w-6 h-6" style={{ color: '#4A3B00' }} />
-          </button>
+          <a
+  href="https://portugal-npp.talentlms.com/catalog"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:scale-110 hover:opacity-70 transition-all"
+>
+  <ChevronRight className="w-6 h-6" style={{ color: '#4A3B00' }} />
+</a>
+
         </div>
-        <div className="grid grid-cols-3 gap-4">
-          {discoverCourses.map((course, index) => (
-            <button
-              key={index}
-              className="rounded-xl p-6 hover:scale-105 hover:shadow-md transition-all text-left"
-              style={{ backgroundColor: '#D8CAA5', border: '1px solid #ccb071' }}
-            >
-              <p style={{ color: '#1B1B1B' }}>{course.name}</p>
-            </button>
-          ))}
-        </div>
+        <div className="flex gap-4 overflow-x-auto pb-2">
+  {discoverCourses.map((course, index) => (
+    <div
+      key={index}
+      className="min-w-[250px] rounded-xl p-6 hover:scale-105 hover:shadow-md transition-all text-left flex justify-between items-center cursor-pointer"
+      style={{ backgroundColor: '#D8CAA5', border: '1px solid #ccb071' }}
+      onClick={() => openLink(course.link)}
+    >
+      <p style={{ color: '#1B1B1B' }}>{course.name}</p>
+      <a
+        href={course.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="ml-4 hover:scale-110 transition-all"
+      >
+        <ChevronRight className="w-5 h-5" style={{ color: '#4A3B00' }} />
+      </a>
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
   );
