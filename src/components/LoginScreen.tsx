@@ -5,7 +5,6 @@ import { Input } from './ui/input';
 import purinaLogo from '../purina.png';
 import ber from '../ber.png.jpg';
 
-
 interface LoginScreenProps {
   onLogin: () => void;
 }
@@ -19,24 +18,29 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
     onLogin();
   };
 
+  const abrirCasoMolly = () => {
+    window.open('https://www.instagram.com/p/DQx2VENALXs/?igsh=MTIxMjNqbWY1OGdsaA==', '_blank');
+  };
+
   return (
     <div className="flex h-screen">
+      
       {/* Left side - Login form */}
       <div className="w-1/2 flex flex-col items-center justify-center px-16" style={{ backgroundColor: '#0A0A0A' }}>
         <div className="w-full max-w-md">
+
           {/* Logo */}
           <div className="mb-12">
-  <div className="flex justify-center mb-8">
-    <img
-      src={purinaLogo}
-      alt="Purina Logo"
-      className="w-[160px]"
-    />
-  </div>
-</div>
+            <div className="flex justify-center mb-8">
+              <img
+                src={purinaLogo}
+                alt="Purina Logo"
+                className="w-[160px]"
+              />
+            </div>
+          </div>
 
-
-<h1 className="text-white mb-8 text-center">Login</h1>
+          <h1 className="text-white mb-8 text-center">Login</h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -72,20 +76,28 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
         </div>
       </div>
 
-      
-{/* AQUIIIIIIIIIIII A FT DO DOG */}
-      {/* Right side - Image and case study */}
+      {/* Right side */}
       <div className="w-1/2 relative">
         <ImageWithFallback
           src={ber}
           alt="Dog do campo"
           className="w-full h-full object-cover"
         />
+
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-12">
-          <div className="text-white px-6 py-3 inline-block rounded-lg mb-4" style={{ backgroundColor: '#ccb071', color: '#0A0A0A' }}>
+          <div
+            className="text-white px-6 py-3 inline-block rounded-lg mb-4"
+            style={{ backgroundColor: '#ccb071', color: '#0A0A0A' }}
+          >
             <span>Purina Pro Plan</span>
           </div>
-          <h2 className="text-white">Conheça o caso Molly</h2>
+
+          <h2
+            className="text-white cursor-pointer hover:underline hover:opacity-80 transition-all text-lg"
+            onClick={abrirCasoMolly}
+          >
+            Conheça o caso Molly →
+          </h2>
         </div>
       </div>
     </div>
